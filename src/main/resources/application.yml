@@ -1,0 +1,20 @@
+info:
+  component: Config Server
+
+server.port: 8888
+
+git_url: github.com
+
+spring:
+  cloud:
+      config:
+        server:
+          git:
+            uri: "ssh://git@${git_url}/rajathr//config-server.git"
+            searchPaths: config*
+            timeout: 20 #20 second timeout to clone from Github
+
+# config server does not need to register with Eureka
+eureka:
+  client:
+    registerWithEureka: true

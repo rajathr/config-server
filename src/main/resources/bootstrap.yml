@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: development
+encrypt:
+  failOnError: true
+  key: aeiou
+
+security:
+   user:
+    name: root
+    password: '{cipher}bd311fe26a68d58705358bcf68bfa359eb6d3f24b47ebee2f71d4231a8f31499'
